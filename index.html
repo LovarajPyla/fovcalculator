@@ -1,0 +1,32 @@
+
+
+<html>
+    <head>
+    <h1 style="background-color:gray; color:white; text-align:center"> Camera System  Angular Field of View (AOV) Calcilations in Degrees</h1>
+    </head>
+    <body>
+    <div style="background-color:powderblue; padding:20px;">
+    <span style="color:black">Enter the value of Horizontal Field of View (HFOV) in mm:   </span><input type="text" id="hfov" style="color:red"></br></br>
+    <span style="color:black">Enter the value of Working Distance (WD) in mm: </span>  <input type="text" id="wd" style="color:red"></br></br>
+     <button onclick="mf()" style="color:red">AOV in Degrees</button>
+    <p  id="demo"></p>
+    </div>
+    <script>
+    function mf(){
+    var a,b,c,d,e,f,g,h,i;
+    a=document.getElementById("hfov").value;
+    b=document.getElementById("wd").value;
+    c=2*b;
+    d=a/c;
+    e=d = Math.atan(d)*180/Math.PI;
+    f=2*e;
+    g="The system Angle of View (AOV) in Degrees:";
+    h=g+f;
+    i=h.fontcolor("RED")
+    
+    document.getElementById("demo").innerHTML=i;}
+    </script>
+    
+    </body>
+    
+    </html>
